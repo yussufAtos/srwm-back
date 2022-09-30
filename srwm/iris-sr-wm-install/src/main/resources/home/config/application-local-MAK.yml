@@ -1,0 +1,53 @@
+server:
+  port: 8585
+  tomcat:
+    accesslog:
+      directory: "C:\\dev_home\\workspaceGIT\\iris-sr-jdk-17\\iris-sr-wm\\iris-sr-wm-app\\target"
+
+logging:
+  config: "C:\\dev_home\\workspaceGIT\\iris-sr-jdk-17\\iris-sr-wm\\iris-sr-wm-install\\src\\main\\resources\\home\\config\\logback-spring.xml"
+  level:
+    com:
+      afp:
+        iris:
+          sr:
+            wm: debug
+
+cas.server-url-prefix: ${app.cas.baseUri}
+cas.server-login-url: ${app.cas.baseUri}/login
+cas.client-host-url: ${app.baseUri} # mettre la vip
+cas.validation-type: CAS
+cas.proxy-callback-url: http://SRBD011.afp.local:8585/casCallback # mettre le hostname spécifique du noeud
+cas.proxy-receptor-url: /casCallback
+cas.redirect-after-validation: false
+cas.authentication-url-patterns: /login #url d'auth srwm
+
+app:
+#  baseUri: "http://172.31.245.211:8585"
+  baseUri: "http://SRBD011.afp.local:8585"
+  documentsEndpoint: "${app.baseUri}/documents/"
+  srwmComponentsEndpoint: "${app.baseUri}/components/"
+  srwmCookie:
+    isSecure: false # true requires https end to end from client to server
+    domain: "" # TODO à tester par/avec MLA pour le localhost
+    path: "/"
+  cms:
+    baseUri: "http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site"
+    userinfoEndpoint: "${app.cms.baseUri}/userinfo"
+    documentsEndpoint: "${app.cms.baseUri}/documents"
+    storiesEndpoint: "${app.cms.baseUri}/stories/"
+    documentValidateEndpointTemplate: "${app.cms.baseUri}/documents/{did}/validator"
+    documentEditorEndpointTemplate: "${app.cms.baseUri}/documents/{did}/editor"
+    phoenixEndpoint: "${app.cms.baseUri}/documents/phoenix"
+  scom:
+    baseUri: "http://vspar-iris-integ-scom:8080"
+    componentsEndpoint: "${app.scom.baseUri}/components/"
+    renditionsEndpoint: "${app.scom.baseUri}/components/renditions/"
+    componentsEndpointById: "${app.scom.baseUri}/components/{id}"
+    thumbnail:
+      height: 320
+      width: 320
+      type: BIGFIT
+  cas:
+    baseUri: "https://vspar-iris-sr-integ26.afp.com:8443/cas"
+

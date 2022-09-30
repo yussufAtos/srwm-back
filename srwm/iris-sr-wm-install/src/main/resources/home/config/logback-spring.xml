@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <!-- The STACKTRACE appender created in order to generate stack trace file -->
+    <appender name="STACKTRACE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/var/log/iris/iriswmadm/iris-sr-wm.trace</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter" />
+        <encoder>
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSSZ}|%level|${HOSTNAME}|[%thread]|%logger{60}|%X{X-AFP-TRANSACTION-ID}|%msg%n</Pattern>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/var/log/iris/iriswmadm/iris-sr-wm-%d{yyyyMMdd-HH}.trace.gz</fileNamePattern>
+            <maxHistory>168</maxHistory> <!-- 168 hourly rolled files (7 days) -->
+        </rollingPolicy>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="STACKTRACE" />
+    </root>
+
+</configuration>

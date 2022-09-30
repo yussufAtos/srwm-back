@@ -1,0 +1,49 @@
+# Ne pas modifier le format des deux lignes ci-dessous car elles sont utilisées dans le script postinstall
+server.port: 8585
+trustore-java-opts: -Djavax.net.ssl.trustStore=/usr/local/etc/iris/cas.jks
+
+logging:
+  level:
+    com:
+      afp:
+        iris:
+          sr:
+            wm: debug
+
+cas.server-url-prefix: ${app.cas.baseUri}
+cas.server-login-url: ${app.cas.baseUri}/login
+cas.client-host-url: ${app.baseUri} # mettre la vip
+cas.validation-type: CAS
+cas.proxy-callback-url: http://##MYHOSTNAME##:${server.port}/casCallback 
+cas.proxy-receptor-url: /casCallback
+cas.redirect-after-validation: false
+cas.authentication-url-patterns: /login #url d'auth srwm
+
+app:
+  baseUri: "http://vspar-iris-d-wsback-31.afp.com:8585"
+  documentsEndpoint: "${app.baseUri}/documents/"
+  srwmComponentsEndpoint: "${app.baseUri}/components/"
+  srwmCookie:
+    isSecure: false # true requires https end to end from client to server
+    domain: "" # TODO à tester par/avec MLA pour le localhost
+    path: "/"
+  cms:
+    baseUri: "http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site"
+    userinfoEndpoint: "${app.cms.baseUri}/userinfo"
+    documentsEndpoint: "${app.cms.baseUri}/documents"
+    storiesEndpoint: "${app.cms.baseUri}/stories/"
+    documentValidateEndpointTemplate: "${app.cms.baseUri}/documents/{did}/validator"
+    documentEditorEndpointTemplate: "${app.cms.baseUri}/documents/{did}/editor"
+    phoenixEndpoint: "${app.cms.baseUri}/documents/phoenix"
+  scom:
+    baseUri: "http://vspar-iris-integ-scom:8080"
+    componentsEndpoint: "${app.scom.baseUri}/components/"
+    renditionsEndpoint: "${app.scom.baseUri}/components/renditions/"
+    componentsEndpointById: "${app.scom.baseUri}/components/{id}"
+    thumbnail:
+      height: 320
+      width: 320
+      type: BIGFIT
+  cas:
+    baseUri: "https://vspar-iris-sr-integ26.afp.com:8443/cas"
+

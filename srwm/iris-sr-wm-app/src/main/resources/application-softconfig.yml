@@ -1,0 +1,18 @@
+softConfig:
+  domain: "AFP's Web Manager backend for front"
+  project: "Web Manager"
+  projectType: "BACK-OFFICE"
+  owner: "SRBD"
+  version: "@project.version@"
+  applicationPorts: >
+    ${server.port}
+  communication: >
+    API
+  jmxPort: 9010
+  languages:
+    Java: "@java.version@"
+  databases: {}
+  internalDependencies:
+    libg2: "@libg2.version@"
+  packaging: "rpm"
+

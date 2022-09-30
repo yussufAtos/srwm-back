@@ -1,0 +1,20 @@
+.idea
+*.iml
+*.pid
+iris-sr-wm-app/target
+iris-sr-wm-app/*.gz
+iris-sr-wm-install/target
+iris-sr-wm-app/*.gz
+*.log
+# Eclipse
+.project
+.settings/
+iris-sr-wm-app/.classpath
+iris-sr-wm-app/.project
+iris-sr-wm-app/.settings/
+iris-sr-wm-app/bin/
+iris-sr-wm-install/.classpath
+iris-sr-wm-install/.project
+iris-sr-wm-install/.settings/
+bin/
+/.metadata/

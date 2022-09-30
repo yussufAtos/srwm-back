@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<packageItem conformance="power" guid="urn:newsml:afp.com:20220428:14a9de2d-00a7-490c-b92c-833c337f9fa2" standard="NewsML-G2" standardversion="2.28"
+             xsi:schemaLocation="http://www.afp.com/format/internal/ afpextensions.xsd http://iptc.org/std/nar/2006-10-01/ NewsML-G2_2.28-spec-All-Power.xsd"
+             xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:aux="http://ns.adobe.com/exif/1.0/aux/" xmlns:exifEX="http://cipa.jp/exif/1.0/" xmlns:x="adobe:ns:meta/"
+             xmlns:html="http://www.w3.org/1999/xhtml" xmlns:afp="http://www.afp.com/format/internal/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exif="http://ns.adobe.com/exif/1.0/">
+    <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_30.xml"/>
+    <catalogRef href="http://cv.afp.com/std/catalog/catalog.AFP-IPTC-G2-V3_1.xml"/>
+    <itemMeta>
+        <itemClass qcode="afpinat:searchResult"/>
+        <provider qcode="nprov:AFP"/>
+        <versionCreated>2022-04-28T13:27:41+00:00</versionCreated>
+        <pubStatus qcode="stat:usable"/>
+        <generator role="afpgenrole:libg2" versioninfo="libg2 3.10.0-alpha1-SNAPSHOT">libg2</generator>
+        <afp:extension>
+            <afp:era>2</afp:era>
+            <afp:afpg2version>3.2</afp:afpg2version>
+        </afp:extension>
+        <afp:searchmetadata>
+            <afp:hitCount exact="true">1</afp:hitCount>
+            <afp:offset>0</afp:offset>
+        </afp:searchmetadata>
+    </itemMeta>
+    <groupSet root="MAINGRPID">
+        <group id="MAINGRPID" role="afpgroup:main">
+            <groupRef idref="ELEMENTS"/>
+            <groupRef idref="PAGINATE"/>
+        </group>
+        <group id="ELEMENTS" role="afpgroup:elements">
+            <itemRef href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/652e71d7-fe52-4c98-b87e-fa54aa33a1fe"
+                     residref="http://d.afp.com/3FQ3H6" residrefformat="valfmt:uri" version="1"
+                     xsi:schemaLocation="http://www.afp.com/format/internal/ afpextensions.xsd http://iptc.org/std/nar/2006-10-01/ NewsML-G2_2.28-spec-All-Power.xsd"
+                     xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/"
+                     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:aux="http://ns.adobe.com/exif/1.0/aux/"
+                     xmlns:exifEX="http://cipa.jp/exif/1.0/" xmlns:x="adobe:ns:meta/" xmlns:html="http://www.w3.org/1999/xhtml"
+                     xmlns:afp="http://www.afp.com/format/internal/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exif="http://ns.adobe.com/exif/1.0/">
+                <afp:iteminfo xml:lang="fr">
+                    <itemClass qcode="afpinat:webStory"/>
+                    <urgency>4</urgency>
+                    <pubStatus qcode="stat:usable"/>
+                    <afp:editorialStatus qcode="afpestatus:validated"/>
+                    <versionCreated>2022-04-26T07:29:35+00:00</versionCreated>
+                    <edNote role="afpnoteRole:client">Pour un usage rï¿½servï¿½ au Desk de Paris.</edNote>
+                    <afp:summary></afp:summary>
+                    <afp:remoteContent contenttype="application/zip" href="urlzip"/>
+                    <afp:matchingTerms/>
+                    <afp:link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/652e71d7-fe52-4c98-b87e-fa54aa33a1fe/lock"
+                              rel="afplinkrel:lock"/>
+                    <afp:link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/652e71d7-fe52-4c98-b87e-fa54aa33a1fe/duplicate"
+                              rel="afplinkrel:copier"/>
+                    <afp:link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/652e71d7-fe52-4c98-b87e-fa54aa33a1fe/purgeability"
+                              rel="afplinkrel:purgeability"/>
+                    <afp:link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/stories/5e39dea6-ae0b-4bfb-bff6-de85b025875e" rel="afplinkrel:story"/>
+                    <afp:link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/652e71d7-fe52-4c98-b87e-fa54aa33a1fe/history"
+                              rel="afplinkrel:history"/>
+                    <afp:link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/652e71d7-fe52-4c98-b87e-fa54aa33a1fe/fullhistory"
+                              rel="afplinkrel:fullHistory"/>
+                    <afp:link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/652e71d7-fe52-4c98-b87e-fa54aa33a1fe/unedit/"
+                              rel="afplinkrel:uneditor"/>
+                    <afp:link
+                            href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/652e71d7-fe52-4c98-b87e-fa54aa33a1fe/editor?expired=2022-04-27T07:29:34%2B0000"
+                            rel="afplinkrel:editor"/>
+                    <afp:link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/652e71d7-fe52-4c98-b87e-fa54aa33a1fe" rel="afplinkrel:self"/>
+                    <afp:confidential>false</afp:confidential>
+                    <language tag="fr"/>
+                    <headline/>
+                    <headline role="afpheadlinerole:catchline">Patrick Balkany retourne en Prison.</headline>
+                    <creator role="afpccrrol:story" uri="http://persons.afp.com/EDIT-FR-SDPO1">
+                        <name>edit-fr-sdpo1 edit-fr-sdpo1</name>
+                        <related afp:href="http://teams.afp.com/PARPHO" rel="skos:broader" type="afpcpnature:team">
+                            <name>PARPHO</name>
+                            <related afp:href="http://teams.afp.com/RFRA" rel="skos:broader" type="afpcpnature:team"/>
+                        </related>
+                        <related afp:href="http://teams.afp.com/RFRA" type="afpcpnature:team">
+                            <name>RFRA</name>
+                            <related afp:href="http://teams.afp.com/RWLD" rel="skos:broader" type="afpcpnature:team"/>
+                        </related>
+                        <related afp:href="http://teams.afp.com/RWLD" type="afpcpnature:team">
+                            <name>RWLD</name>
+                            <related afp:href="http://teams.afp.com/DIRINFO" rel="skos:broader" type="afpcpnature:team"/>
+                        </related>
+                        <related afp:href="http://teams.afp.com/DIRINFO" type="afpcpnature:team">
+                            <name>DIRINFO</name>
+                            <related afp:href="http://teams.afp.com/AFP" rel="skos:broader" type="afpcpnature:team"/>
+                        </related>
+                        <related afp:href="http://teams.afp.com/AFP" type="afpcpnature:team">
+                            <name>AFP</name>
+                        </related>
+                    </creator>
+                    <contributor role="afpcctrol:validate" uri="http://persons.afp.com/EDIT-FR-SDPO1">
+                        <name>edit-fr-sdpo1 edit-fr-sdpo1</name>
+                        <related afp:href="http://teams.afp.com/PARPHO" rel="skos:broader" type="afpcpnature:team">
+                            <name>PARPHO</name>
+                        </related>
+                    </contributor>
+                    <afp:stats/>
+                    <provider qcode="nprov:AFP">
+                        <name>AFP</name>
+                    </provider>
+                    <afp:dateOfEntryInEditorialSystem>2022-04-26T07:29:34.000Z</afp:dateOfEntryInEditorialSystem>
+                    <afp:editorialTag>"1650958175017"</afp:editorialTag>
+                    <afp:technicalTag>"1650958174189"</afp:technicalTag>
+                    <afp:metadataEdited>false</afp:metadataEdited>
+                    <afp:binaryEdited>false</afp:binaryEdited>
+                    <afp:firstValidationDate>2022-04-26T07:29:35.000Z</afp:firstValidationDate>
+                </afp:iteminfo>
+                <afp:headerInfo>
+                    <afp:product choosen="true" firstValidation="2022-04-26T07:29:34Z" lastValidation="2022-04-26T07:29:34Z" name="AFP-FORUM" toSend="true"
+                                 type="http://cv.afp.com/producttypes/wire" uri="http://products.afp.com/wires/AFP-FORUM">
+                        <afp:path>/wires/AFP-FORUM</afp:path>
+                        <afp:self>http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/wires/AFP-FORUM</afp:self>
+                    </afp:product>
+                    <afp:product choosen="true" firstValidation="2022-04-26T07:29:34Z" lastValidation="2022-04-26T07:29:34Z" name="AFP-NO-PUSH" toSend="true"
+                                 type="http://cv.afp.com/producttypes/wire" uri="http://products.afp.com/wires/AFP-NO-PUSH">
+                        <afp:path>/wires/AFP-NO-PUSH</afp:path>
+                        <afp:self>http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/wires/AFP-NO-PUSH</afp:self>
+                    </afp:product>
+                </afp:headerInfo>
+            </itemRef>
+        </group>
+        <group id="PAGINATE" role="afpgroup:paginate">
+            <itemRef href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/search" rel="afplinkrel:paginatedCollectionController"/>
+        </group>
+    </groupSet>
+</packageItem>

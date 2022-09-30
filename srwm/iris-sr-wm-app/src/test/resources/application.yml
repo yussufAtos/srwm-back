@@ -1,0 +1,74 @@
+server:
+  port: 8585
+
+spring:
+  pid:
+    file: "iris-sr-wm-app/target/var/run/wm.pid"
+
+app:
+  baseUri: "http://test.srwm.com/srwm"
+  documentsEndpoint: "${app.baseUri}/documents/"
+  srwmComponentsEndpoint: "http://test.wsback.com:8585/components/"
+  srwmCookie:
+    isSecure: false # true requires https end to end from client to server
+    domain: "test.srwm.com/srwm/"
+    path: "/"
+  cms:
+    baseUri: "http://test.cms.com:9080/nuxeo/site"
+    userinfoEndpoint: "${app.cms.baseUri}/userinfo"
+    documentsEndpoint: "${app.cms.baseUri}/documents"
+    storiesEndpoint: "${app.cms.baseUri}/stories/"
+    documentValidateEndpointTemplate: "${app.cms.baseUri}/documents/{did}/validator"
+    documentEditorEndpointTemplate: "${app.cms.baseUri}/documents/{did}/editor"
+    phoenixEndpoint: "${app.cms.baseUri}/documents/phoenix"
+  scom:
+    baseUri: "http://test.scom"
+    componentsEndpoint: "${app.scom.baseUri}/components"
+    renditionsEndpoint: "${app.scom.baseUri}/components/renditions/"
+    componentsEndpointById: "${app.scom.baseUri}/components/{id}"
+    thumbnail:
+      height: 320
+      width: 320
+      type: BIGFIT
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    enabled-by-default: true
+
+logging:
+  level:
+    com:
+      afp:
+        iris:
+          sr:
+            wm: debug
+
+cas.server-url-prefix: https://test.cas.com:8443/cas
+cas.server-login-url: https://test.cas.com:8443/cas/login
+cas.client-host-url: http://localhost:8585
+cas.validation-type: CAS
+cas.proxy-callback-url: http://localhost:8585/casCallback
+cas.proxy-receptor-url: /casCallback
+cas.redirect-after-validation: false
+cas.authentication-url-patterns: /loginTest # choisir une URL qui n'existe pas
+
+
+softConfig:
+  domain: "Serveur web d'accès au SR"
+  project: "WEB MANAGER"
+  projectType: "BACK-OFFICE"
+  owner: "SRBD"
+  version: "@project.version@"
+  applicationPorts: >
+    ${server.port}
+  communication: >
+    API
+  jmxPort: 9010
+  languages:
+    Java: "@java.version"
+  databases: {}
+  internalDependencies: {}
+  packaging: "rpm"

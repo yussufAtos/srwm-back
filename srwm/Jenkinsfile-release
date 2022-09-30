@@ -1,0 +1,85 @@
+pipeline {
+    agent {label 'srbd'}
+
+    tools {
+        maven 'maven-3.6.3'
+        jdk 'jdk-17-SRBD'
+    }
+
+    parameters {
+        string(name: 'releaseVersion', defaultValue: '0.0.0', description: 'Release version number')
+        string(name: 'nextVersion', defaultValue: '0.0.0-SNAPSHOT', description: 'Next developpement version')
+        string(name: 'scmUsername')
+        password(name: 'scmPassword')
+    }
+
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+    }
+
+    environment {
+        srbdGitCredId='git_srbd'
+        mavenSettingsFile='afp-global-maven-settings'
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git branch: "master",
+                        credentialsId: "${env.srbdGitCredId}",
+                        url: 'ssh://git@gitlab.afp.com:2222/srbe/iris-sr-wm.git'
+            }
+        }
+
+        stage ('Release') {
+            when {
+                expression { params.releaseVersion != '0.0.0' && params.nextVersion != '0.0.0-SNAPSHOT' }
+            }
+
+            steps {
+                echo "Releasing version ${params.releaseVersion}"
+                withMaven(globalMavenSettingsConfig: env.mavenSettingsId, maven: 'maven-3.6.3', publisherStrategy: 'EXPLICIT') {
+                	sh """mvn  -B -f pom.xml -DdevelopmentVersion=${params.nextVersion} \
+                	-DreleaseVersion=${params.releaseVersion} \
+                	-DscmCommentPrefix='Livraison composant iris-sr-wm-${params.releaseVersion}' \
+                	-Dresume=false release:prepare -Dusername=${params.scmUsername} \
+                	-Dpassword='${params.scmPassword}'"""
+                }
+            }
+        }
+
+        stage ('Release Delivery') {
+            steps {
+                dir('tagDir'){
+                    checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: "iris-sr-wm-${params.releaseVersion}"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: env.srbdGitCredId, url: 'ssh://git@gitlab.afp.com:2222/srbe/iris-sr-wm.git']]]
+                    withMaven(globalMavenSettingsConfig: env.mavenSettingsId, maven: 'maven-3.6.3', publisherStrategy: 'EXPLICIT') {
+                        sh('mvn  -B -f pom.xml clean deploy')
+                        archiveArtifacts artifacts: '**/*rpm', fingerprint: true
+                    }
+                }
+
+            }
+        }
+
+//        TODO : trouver la content view vers laquelle publier
+
+	   stage('Publish RPM') {
+            steps {
+                sh ('''
+                  cd tagDir/iris-sr-wm-install/target/rpm/iris-sr-wm/RPMS/noarch ;
+				  RPM_FILE=$(ls *.rpm)
+        		  RPM_NAME=$(basename $RPM_FILE)
+				  /usr/bin/hammer repository upload-content --organization-label "AFP_BLUE" --product "AFP" --name "iris-webstories" --path $RPM_NAME ;
+				  /usr/bin/hammer content-view publish --id 153 --organization-id 1  --description "$RPM_NAME" ;              
+                ''')
+            }
+        }
+
+    }
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}

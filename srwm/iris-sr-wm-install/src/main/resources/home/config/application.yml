@@ -1,0 +1,50 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+    session:
+      timeout: 10
+  jmx:
+    enabled: true
+  pid:
+    file: "/home/iriswmadm/var/run/wm.pid"
+  profiles:
+    include: softconfig
+  web:
+    resources:
+      static-locations: "file:/home/iris-sr-wm/java/tomcat/webapps/webstory/"
+
+logging:
+  config: "/home/iriswmadm/config/logback-spring.xml"
+  file:
+    name: "spring-wm.log"
+
+server:
+  shutdown: graceful
+  servlet:
+    session:
+      timeout: 10
+  tomcat:
+    mbeanregistry:
+      enabled: true
+    accesslog:
+      enabled: true
+      prefix: "wm_access"
+      pattern: "%t %h %{X-Forwarded-For}i %l %u %m %U %q %{X-AFP-TRANSACTION-ID}i %{X-AFP-ARCHIVE}i %{X-AFP-RESULTS-COUNT}i %b %s %D ms %{ELEMENT_AMOUNT}o"
+      file-date-format: "_yyyy-MM-dd"
+      directory: "/var/log/iris/iriswmadm/"
+      max-days: 7
+      rename-on-rotate: true
+  error:
+    include-stacktrace: never
+    include-message: always
+
+management:
+  endpoints:
+    jmx:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

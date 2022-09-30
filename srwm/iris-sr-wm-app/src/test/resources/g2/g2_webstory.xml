@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<newsMessage
+        xsi:schemaLocation="http://www.afp.com/format/internal/ afpextensions.xsd http://iptc.org/std/nar/2006-10-01/ NewsML-G2_2.28-spec-All-Power.xsd"
+        xmlns="http://iptc.org/std/nar/2006-10-01/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:aux="http://ns.adobe.com/exif/1.0/aux/"
+        xmlns:exifEX="http://cipa.jp/exif/1.0/" xmlns:x="adobe:ns:meta/" xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns:afp="http://www.afp.com/format/internal/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exif="http://ns.adobe.com/exif/1.0/">
+    <header>
+        <sent>2022-08-09T15:03:57+00:00</sent>
+        <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_30.xml"/>
+        <catalogRef href="http://cv.afp.com/std/catalog/catalog.AFP-IPTC-G2-V3_1.xml"/>
+        <afp:headerExtension>
+            <afp:product choosen="true" firstValidation="2022-08-09T15:03:57+00:00"
+                         lastValidation="2022-08-09T15:03:57+00:00" name="AFP-FORUM" toSend="true"
+                         type="http://cv.afp.com/producttypes/wire" uri="http://products.afp.com/wires/AFP-FORUM">
+                <afp:path>/wires/AFP-FORUM</afp:path>
+                <afp:self>http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/wires/AFP-FORUM</afp:self>
+            </afp:product>
+            <afp:product choosen="true" firstValidation="2022-08-09T15:03:57+00:00"
+                         lastValidation="2022-08-09T15:03:57+00:00" name="AFP-NO-PUSH" toSend="true"
+                         type="http://cv.afp.com/producttypes/wire" uri="http://products.afp.com/wires/AFP-NO-PUSH">
+                <afp:path>/wires/AFP-NO-PUSH</afp:path>
+                <afp:self>http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/wires/AFP-NO-PUSH</afp:self>
+            </afp:product>
+        </afp:headerExtension>
+    </header>
+    <itemSet>
+        <newsItem conformance="power" guid="http://d.afp.com/3FQ9U9" xml:lang="fr" standard="NewsML-G2"
+                  standardversion="2.28" version="1">
+            <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_30.xml"/>
+            <catalogRef href="http://cv.afp.com/std/catalog/catalog.AFP-IPTC-G2-V3_1.xml"/>
+            <itemMeta>
+                <itemClass qcode="afpinat:webStory"/>
+                <provider qcode="nprov:AFP">
+                    <name>AFP</name>
+                </provider>
+                <versionCreated>2022-08-09T15:03:57+00:00</versionCreated>
+                <firstCreated>2022-08-09T15:03:57+00:00</firstCreated>
+                <pubStatus qcode="stat:usable"/>
+                <generator role="afpgenrole:libg2" versioninfo="libg2 3.10.1-SNAPSHOT">libg2</generator>
+                <edNote role="afpnoteRole:client"/>
+                <link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/fed1e74f-0923-40ca-acb7-7677a744e70a/lock"
+                      rel="afplinkrel:lock"/>
+                <link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/fed1e74f-0923-40ca-acb7-7677a744e70a/duplicate"
+                      rel="afplinkrel:copier"/>
+                <link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/fed1e74f-0923-40ca-acb7-7677a744e70a/purgeability"
+                      rel="afplinkrel:purgeability"/>
+                <link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/stories/ec6bc852-a4b7-4e7a-b0f6-8e42f24bf4e2"
+                      rel="afplinkrel:story"/>
+                <link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/fed1e74f-0923-40ca-acb7-7677a744e70a/binary"
+                      rel="afplinkrel:binary"/>
+                <link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/fed1e74f-0923-40ca-acb7-7677a744e70a/binary/unedit"
+                      rel="afplinkrel:binaryuneditor"/>
+                <link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/fed1e74f-0923-40ca-acb7-7677a744e70a/binary/editor"
+                      rel="afplinkrel:binaryeditor"/>
+                <link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/fed1e74f-0923-40ca-acb7-7677a744e70a/history"
+                      rel="afplinkrel:history"/>
+                <link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/fed1e74f-0923-40ca-acb7-7677a744e70a/fullhistory"
+                      rel="afplinkrel:fullHistory"/>
+                <link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/fed1e74f-0923-40ca-acb7-7677a744e70a/unedit/"
+                      rel="afplinkrel:uneditor"/>
+                <link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/fed1e74f-0923-40ca-acb7-7677a744e70a/editor?expired=2022-08-10T15:03:57%2B0000"
+                      rel="afplinkrel:editor"/>
+                <link href="http://vspar-iris-sr-integ22.afp.com:9080/nuxeo/site/documents/fed1e74f-0923-40ca-acb7-7677a744e70a"
+                      rel="afplinkrel:self"/>
+                <afp:extension>
+                    <afp:era>2</afp:era>
+                    <afp:afpg2version>3.2</afp:afpg2version>
+                    <afp:editorialStatus qcode="afpestatus:validated"/>
+                    <afp:serverInfo>IRIS CMS 3.10.9.1</afp:serverInfo>
+                    <afp:firstValidationDate>2022-08-09T15:03:57.000Z</afp:firstValidationDate>
+                    <afp:editorialTag>"1660057437498"</afp:editorialTag>
+                    <afp:technicalTag>"1660057437072"</afp:technicalTag>
+                    <afp:dateOfEntryInEditorialSystem>2022-08-09T15:03:57.000Z</afp:dateOfEntryInEditorialSystem>
+                    <afp:metadataEdited>false</afp:metadataEdited>
+                    <afp:binaryEdited>false</afp:binaryEdited>
+                </afp:extension>
+            </itemMeta>
+            <contentMeta>
+                <icon rendition="rnd:thumbnail" contenttype="image/jpeg"
+                      href="http://vspar-iris-integ-scom:8080/components/36d0c5a9f215b187396a74174c05df9c9829d5de"/>
+                <icon rendition="rnd:preview" contenttype="image/jpeg"
+                      href="http://vspar-iris-integ-scom:8080/components/57d99fdd07ff8d2f0a1e79826c78260dbdb083a2"/>
+                <urgency>4</urgency>
+                <creator role="afpccrrol:story" uri="http://persons.afp.com/EDIT-FR-PHO">
+                    <name>edit-fr-pho edit-fr-pho</name>
+                    <related afp:href="http://teams.afp.com/PARPHO" rel="skos:broader" type="afpcpnature:team">
+                        <name>PARPHO</name>
+                        <related afp:href="http://teams.afp.com/RFRA" rel="skos:broader" type="afpcpnature:team"/>
+                    </related>
+                    <related afp:href="http://teams.afp.com/RFRA" type="afpcpnature:team">
+                        <name>RFRA</name>
+                        <related afp:href="http://teams.afp.com/RWLD" rel="skos:broader" type="afpcpnature:team"/>
+                    </related>
+                    <related afp:href="http://teams.afp.com/RWLD" type="afpcpnature:team">
+                        <name>RWLD</name>
+                        <related afp:href="http://teams.afp.com/DIRINFO" rel="skos:broader" type="afpcpnature:team"/>
+                    </related>
+                    <related afp:href="http://teams.afp.com/DIRINFO" type="afpcpnature:team">
+                        <name>DIRINFO</name>
+                        <related afp:href="http://teams.afp.com/AFP" rel="skos:broader" type="afpcpnature:team"/>
+                    </related>
+                    <related afp:href="http://teams.afp.com/AFP" type="afpcpnature:team">
+                        <name>AFP</name>
+                    </related>
+                </creator>
+                <creator role="afpccrrol:extractedFromDateline">
+                    <related afp:href="http://teams.afp.com/AFP" rel="skos:broader" type="afpcpnature:team">
+                        <name>AFP</name>
+                    </related>
+                </creator>
+                <contributor role="afpcctrol:saved" uri="http://persons.afp.com/EDIT-FR-PHO">
+                    <name>edit-fr-pho edit-fr-pho</name>
+                    <related afp:href="http://teams.afp.com/PARPHO" rel="skos:broader" type="afpcpnature:team">
+                        <name>PARPHO</name>
+                        <related afp:href="http://teams.afp.com/RFRA" rel="skos:broader" type="afpcpnature:team"/>
+                    </related>
+                    <related afp:href="http://teams.afp.com/RFRA" type="afpcpnature:team">
+                        <name>RFRA</name>
+                        <related afp:href="http://teams.afp.com/RWLD" rel="skos:broader" type="afpcpnature:team"/>
+                    </related>
+                    <related afp:href="http://teams.afp.com/RWLD" type="afpcpnature:team">
+                        <name>RWLD</name>
+                        <related afp:href="http://teams.afp.com/DIRINFO" rel="skos:broader" type="afpcpnature:team"/>
+                    </related>
+                    <related afp:href="http://teams.afp.com/DIRINFO" type="afpcpnature:team">
+                        <name>DIRINFO</name>
+                        <related afp:href="http://teams.afp.com/AFP" rel="skos:broader" type="afpcpnature:team"/>
+                    </related>
+                    <related afp:href="http://teams.afp.com/AFP" type="afpcpnature:team">
+                        <name>AFP</name>
+                    </related>
+                </contributor>
+                <contributor role="afpcctrol:validate" uri="http://persons.afp.com/EDIT-FR-PHO">
+                    <name>edit-fr-pho edit-fr-pho</name>
+                    <related afp:href="http://teams.afp.com/PARPHO" rel="skos:broader" type="afpcpnature:team">
+                        <name>PARPHO</name>
+                    </related>
+                </contributor>
+                <altId type="afpidtype:afpshortid">3FQ9U9</altId>
+                <language tag="fr"/>
+                <headline>Nouvelles grèves dans les aéroports français</headline>
+                <headline role="afpheadlinerole:catchline"/>
+            </contentMeta>
+            <contentSet>
+                <remoteContent contenttype="application/zip"
+                               href="http://vspar-iris-integ-scom:8080/components/f2e30a752042868a044bdea5918ee0fc5a86dde1"/>
+            </contentSet>
+        </newsItem>
+    </itemSet>
+</newsMessage>

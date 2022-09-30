@@ -1,0 +1,29 @@
+[Unit]
+Description=IRIS WM
+After=syslog.target network.target
+
+[Service]
+Type=forking
+
+ExecStart=/home/iriswmadm/bin/wmctl.sh start
+ExecStop=/home/iriswmadm/bin/wmctl.sh stop
+
+PIDFile=/home/iriswmadm/var/run/wm.pid
+SuccessExitStatus=143
+
+User=iriswmadm
+Group=iris
+Environment=PATH=/usr/lib/jvm/zulu-17/bin:/usr/bin:/usr/local/bin
+WorkingDirectory=/home/iriswmadm/
+
+Restart=on-failure
+# Restart service after 10 seconds if node service crashes
+RestartSec=10
+
+# Output to syslog
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=iris-wm
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.afp.iris.sr.wm</groupId>
+        <artifactId>iris-sr-wm</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
+    </parent>
+
+    <artifactId>iris-sr-wm-install</artifactId>
+    <packaging>rpm</packaging>
+
+    <name>iris-sr-wm-install</name>
+
+    <properties>
+        <rpm.user>iriswmadm</rpm.user>
+        <rpm.group>iris</rpm.group>
+        <rpm.name>iris-sr-wm</rpm.name>
+        <rpm.version>${project.version}</rpm.version>
+        <rpm.uid>573</rpm.uid>
+        <rpm.process>IRIS.WM</rpm.process>
+        <rpm.description>SR Web Manager</rpm.description>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.afp.iris.sr.wm</groupId>
+            <artifactId>iris-sr-wm-app</artifactId>
+            <version>1.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Generate Build Number for the RPM -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>maven-buildnumber-plugin</artifactId>
+                <version>0.9.6</version>
+                <configuration>
+                    <format>{0,time,yyyyMMddHHmmss}</format>
+                    <items>
+                        <item>timestamp</item>
+                    </items>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- RPM Packaging -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>rpm-maven-plugin</artifactId>
+                <version>2.2.0</version>
+                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>rpm</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <name>${rpm.name}</name>
+                    <version>${rpm.version}</version>
+                    <release>${buildNumber}</release>
+                    <distribution>No distribution</distribution>
+                    <group>AFP/Iris/SRBD</group>
+                    <prefix>/</prefix>
+                    <defaultDirmode>755</defaultDirmode>
+                    <defaultFilemode>664</defaultFilemode>
+                    <defaultUsername>${rpm.user}</defaultUsername>
+                    <defaultGroupname>${rpm.group}</defaultGroupname>
+                    <keyname>IRIS SR</keyname>
+                    <keyPassphrase>
+                        <passphrase>iris4dm!</passphrase>
+                    </keyPassphrase>
+                    <defineStatements>
+                        <defineStatement>_binaries_in_noarch_packages_terminate_build 0</defineStatement>
+                    </defineStatements>
+                    <requires>
+                        <require>zulu-17</require>
+                    </requires>
+
+                    <mappings>
+                        <mapping>
+                            <directory>/home/iriswmadm/</directory>
+                            <configuration>false</configuration>
+                            <dependency>
+                                <stripVersion>true</stripVersion>
+                                <includes>
+                                    <include>${project.groupId}:iris-sr-wm-app</include>
+                                </includes>
+                            </dependency>
+                        </mapping>
+                        <mapping>
+                            <directory>/home/iriswmadm/</directory>
+                            <configuration>false</configuration>
+                            <sources>
+                                <source>
+                                    <location>src/main/resources/home/</location>
+                                </source>
+                            </sources>
+                        </mapping>
+                    </mappings>
+
+                    <preinstallScriptlet>
+                        <scriptFile>src/main/resources/home/scripts/preinstall.sh</scriptFile>
+                        <fileEncoding>utf-8</fileEncoding>
+                        <filter>true</filter>
+                    </preinstallScriptlet>
+                    <postinstallScriptlet>
+                        <scriptFile>src/main/resources/home/scripts/postinstall.sh</scriptFile>
+                        <fileEncoding>utf-8</fileEncoding>
+                        <filter>true</filter>
+                    </postinstallScriptlet>
+                    <preremoveScriptlet>
+                        <scriptFile>src/main/resources/home/scripts/preuninstall.sh</scriptFile>
+                        <fileEncoding>utf-8</fileEncoding>
+                        <filter>true</filter>
+                    </preremoveScriptlet>
+                    <postremoveScriptlet>
+                        <scriptFile>src/main/resources/home/scripts/postuninstall.sh</scriptFile>
+                        <fileEncoding>utf-8</fileEncoding>
+                        <filter>true</filter>
+                    </postremoveScriptlet>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
